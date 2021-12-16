@@ -16,22 +16,20 @@
 <body>
     <div id="app" class="container">
         <div class="slider-wrapper">
-            <div class="prev">
+        <div @click="prevImg" class="prev">
                 <i class="fas fa-angle-left"></i>
             </div>
             <div class="images">
                 <img src="img/Paesaggi-italiani-Matera-1985-Luca-Tamagnini.jpeg" alt="">
             </div>
-            <div class="next">
-                <i class="fas fa-angle-right"></i>
-            </div>
-            <div class="nav">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-            </div>
+        <div @click="nextImg" class="next">
+               <i class="fas fa-angle-right"></i>
+          </div>
+          <div class="nav">
+            <i v-for="(circle, index) in images" class="fas fa-circle" :class="(counter == index) ? 'active' : ''"></i>
+          </div>
+         </div>
         </div>
-    </div>
     <!--script-->
     <script src="js/script.js"></script>
 </body>
