@@ -15,14 +15,12 @@
 <!--inizio body--> 
 <body>
     <div id="app" class="container">
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" @mouseover="stop" @mouseleave="play">
         <div @click="prevImg" class="prev">
                 <i class="fas fa-angle-left"></i>
             </div>
             <div class="images">
-                <img src="img/img1.jpeg" alt="">
-              
-
+                <img :src="`images/${images[counter]}`" alt="">
             </div>
         <div @click="nextImg" class="next">
                <i class="fas fa-angle-right"></i>

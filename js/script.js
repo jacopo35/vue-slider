@@ -31,9 +31,34 @@ const app = new Vue(
     prevImg: function () {//funzione indietro
              this.counter -= 1;
              if (this.counter < 0) {
-             this.counter = this.images.length - 1;
+             this.counter = this.imagess.length - 1;
              }
-            }
+            },
+    dotClick: function (index) { //funzione per rendere cliccabili i pallini
+              this.counter = index;
+            },
+    play: function () { //funzione per l'autoplay
+          this.timer = setInterval(() => {
+          this.nextImg();
+        }, 3000);
+       },
+     stop: function () {
+     clearTimeout(this.timer);
+      }
+    },
+     created() { 
+         this.play();
         }
     }
 )
+
+
+
+
+
+
+
+
+
+
+
