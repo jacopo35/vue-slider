@@ -7,11 +7,13 @@ Bonus:
 3 - quando il mouse va in hover sullo slider, bloccare l’autoplay e farlo riprendere quando esce.
 */
 
+
+//utilizzo di VueJs
 const app = new Vue(
  {
-    el: '#app',
-    data: { 
-    images: [
+    el: '#app', //elemento da utilizzare
+    data: {//dichiarare i dati da utilizzare
+    images: [ //immagini da utilizzate
      'image1.jpg',
      'image2.jpg',
      'image3.jpg',
@@ -19,14 +21,14 @@ const app = new Vue(
      ],
     counter: 0
     },
-    methods: { 
-    nextImg: function () {
+    methods: {//utilizzo delle funzioni avanti e indietro
+    nextImg: function () {//funzione avanti
              this.counter += 1;
              if (this.counter > this.images.length - 1) {
                  this.counter = 0;
              }
             },
-    prevImg: function () {
+    prevImg: function () {//funzione indietro
              this.counter -= 1;
              if (this.counter < 0) {
              this.counter = this.images.length - 1;
