@@ -14,10 +14,10 @@ const app = new Vue(
     el: '#app', //elemento da utilizzare
     data: {//dichiarare i dati da utilizzare
     images: [ //immagini da utilizzate
-     'img1.jpg',
-     'img2.jpg',
-     'img3.jpg',
-     'img4.jpg'
+     'img1.jpeg',
+     'img2.jpeg',
+     'img3.jpeg',
+     'img4.jpeg'
      ],
     counter: 0
     },
@@ -50,7 +50,7 @@ const app = new Vue(
          this.play();
         }
     }
-)
+);
 
 
 
